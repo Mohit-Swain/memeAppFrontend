@@ -30,6 +30,7 @@ class PostMemes extends Component {
 
     handleSubmit(){
         backendAxios.post('/memes',{
+            name : this.userName,
             url : this.state.memeUrl,
             caption : this.state.memeCaption
         }).then(() => {
